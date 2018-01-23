@@ -1,0 +1,18 @@
+<!--shippinglist.wxml-->
+<view class="list" wx:for="{{goodsList}}" wx:key="unique">
+  <view class="list-block" bindtap="ToShop" id="{{item.bodyId}}">
+    <view class="block-img">
+      <image class="cover" src="{{item.imagePath}}" wx:if="{{item.imagePath}}" mode="aspectFit" />
+    </view>
+    <view class="block-text">
+      <view class="block-info">
+        <text class="text-name">{{item.bodyName}}</text>
+        <text class="text-detail">{{item.bodyShowInfo}}</text>
+      </view>
+      <view class="block-price">
+        <view class="text-price">售价：￥{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="hr-line"></view>
+</view>

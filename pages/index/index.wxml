@@ -1,0 +1,119 @@
+<!--index.wxml-->
+<!--顶部搜索栏-->
+<view class="search">
+    <view class="search-section">
+      <view class="search-input-wrapper" bindtap="ToSearch" >
+        <image class="search-img" src="/img/search.png" />
+        <input class="search-input" placeholder="热门搜索词" placeholder-class="placeholder"></input >
+      </view>
+      <!--
+      <view class="search-button-wrapper">
+        <image class="search-button" src="/img/chat.png" bindtap=""></image>
+      </view>
+      -->
+    </view>
+</view>
+<!--首页Banner-->
+<view class="banner">
+  <swiper class="banner-swiper" autoplay="autoplay" current="{{swiperCurrent}}" interval="5000" duration="500" bindchange="swiperChange">
+    <block wx:for="{{bannerInfos1}}" wx:key="unique">
+      <swiper-item>
+        <image class="banner-img" src="{{item.image}}" wx:if="{{item.image}}" mode="aspectFill"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="banner-dots">
+    <block wx:for="{{bannerInfos1}}" wx:key="unique">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>
+<!--分类筛选-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--第一版废弃样式-->
+<!--首页Banner
+<view class="banner">
+  <swiper class="banner-swiper" autoplay="autoplay" current="{{swiperCurrent}}" interval="5000" duration="500" bindchange="swiperChange">
+    <block wx:for="{{bannerInfos1}}" wx:key="unique">
+      <swiper-item>
+        <image class="banner-img" src="{{item.image}}" wx:if="{{item.image}}" mode="aspectFill" bindtap="ToPro" id="{{item.href}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="banner-dots">
+    <block wx:for="{{bannerInfos1}}" wx:key="unique">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>
+-->
+<!--首页分类
+<view class="banner-title">
+  <view class="banner-title-left" bindtap="ToPro" id="{{bannerInfos2[1].href}}" >
+    <image class="banner-title-img" src="{{bannerInfos2[1].image}}" wx:if="{{bannerInfos2[1].image}}" mode="scaleToFill"/> 
+  </view>
+  <view class="banner-title-right" bindtap="ToPro" id="{{bannerInfos2[2].href}}">
+    <image class="banner-title-img" src="{{bannerInfos2[2].image}}" wx:if="{{bannerInfos2[2].image}}" mode="scaleToFill"/> 
+  </view>
+</view>
+-->
+<!--首页活动
+<view class="abstract">
+  <view class="abstract-section">
+    <view class="abstract-left" bindtap="ToPro">
+      <image class="abstract-left-img" src="/img/img1.jpg" mode="aspectFill"></image>
+      <view class="abstract-tips"><text class="abstract-tips-text">吃喝</text></view>
+    </view>
+    <view class="abstract-middle" bindtap="ToPro">
+      <image class="abstract-middle-img" src="/img/img2.jpg" mode="aspectFill"></image>
+      <view class="abstract-tips"><text class="abstract-tips-text">玩乐</text></view>
+    </view>
+    <view class="abstract-right" bindtap="ToArticles">
+      <image class="abstract-right-img" src="/img/img3.jpg" mode="aspectFill"></image>
+      <view class="abstract-tips"><text class="abstract-tips-text">君享论</text></view>
+    </view>
+  </view>
+</view>
+-->
+<!--文章图片链接栏
+<view class="article" wx:for="{{article_data}}" wx:key="unique">
+  <navigator url="/pages/articles/article/article?id={{item.id}}">
+    <image class="article-cover" src="{{item.images.large}}" wx:if="{{item.images.large}}" mode="widthFix"></image>
+  </navigator>
+</view>
+-->

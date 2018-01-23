@@ -1,0 +1,89 @@
+<!--shopping.wxml-->
+<!--商品展示图片-->
+<view class="banner">
+  <swiper class="banner-swiper" current="{{swiperCurrent}}" bindchange="swiperChange">
+    <block wx:for="{{bodyImages}}" wx:key="unique">
+      <swiper-item>
+        <image class="banner-img" src="{{item}}" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="banner-dots">
+    <block wx:for="{{bodyImages}}" wx:key="unique">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>
+
+<!--商品信息展示-->
+<view class="pro-info">
+  <view class="info-name">{{productInfo.productName}}</view>
+  <view class="info-detail">{{productInfo.serviceContent}}</view>
+</view>
+<view  class="pro-price-section">
+  <text class="price-real">￥{{proprice}}</text>
+  <view class="pro-price">
+    <view class="price-tips" hidden="{{hiddenprice}}"><text class="price-text">5<!--{{discount}}-->折</text></view>
+    <text class="price-ori" hidden="{{hiddenprice}}">￥198.00<!--{{price-ori}}--></text> 
+  </view>
+  <view class="section">
+    <image image class="section-ico" src="/img/love.png" mode="aspectFit"></image>
+    <image image class="section-ico" src="/img/share.png" mode="aspectFit" bindtap="Share" ></image>
+  </view >
+</view >
+<view class="hr-line"></view>
+
+<!--商品属性选择-->
+<view class="pro-select" >已选:
+  <text>{{procolor}} {{prosize}} {{pronum}}件</text>
+  <!--image class="section-ico" src="/img/up.png" mode="aspectFit" ></image-->
+  <!--image class="section-ico" src="/img/down.png" mode="aspectFit" ></image-->
+</view>
+<view class="select">
+  <view wx:if="{{ ProColorArray.length>0 }}" class='color'>
+    <text class='title'>颜色:</text>
+    <view class="ItemText">
+      <block wx:for="{{ProColorArray}}" wx:key="unique" >
+        <view wx:if="{{item == procolor}}" class="pro-item-select">{{item}}</view>
+        <view wx:else class="pro-item" bindtap="ToSelectColor" id="{{item}}">{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <view wx:if="{{ ProSizeArray.length>0 }}" class='size'>
+    <text class='title'>尺寸:</text>
+    <view class="ItemText">
+      <block wx:for="{{ProSizeArray}}" wx:key="unique" >
+        <view wx:if="{{item == prosize}}" class="pro-item-select">{{item}}</view>
+        <view wx:else class="pro-item" bindtap="ToSelectSize" id="{{item}}">{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <view class='count'>
+    <text class='title'>数量:</text>
+    <view class="count-box">
+      <text wx:if="{{pronum ==1}}" class="count-down-not">-</text>
+      <text wx:else class="count-down" bindtap="minusCount">-</text>
+      <text class="count-num">{{pronum}}</text>
+      <text class="count-add" bindtap="addCount">+</text>
+    </view>
+  </view>
+</view>
+<view class="hr-line"></view>
+
+<!--商品详情-->
+<view class='info-title'>商品详情:</view>
+<view class="info-block">
+  <block wx:for="{{contentImages}}" wx:key="unique">
+    <image class="info-image" src="{{item}}" mode="widthFix" />
+  </block>
+</view>
+
+<!--底部购买按钮-->
+<view class="btn-section1">
+  <navigator class="btn-ico1" url=""><image class="ico" src="/img/Comments.png" mode="aspectFit" ></image></navigator>
+  <navigator class="btn-ico2" url=""><image class="ico" src="/img/shopping_cart1.png" mode="aspectFit" ></image></navigator>
+</view>
+<view class="btn-section2">
+  <button class="btn-submit">￥</button> 
+  <view class="btn-tips">一键购买</view>
+</view>

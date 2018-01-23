@@ -1,0 +1,55 @@
+<!--result.wxml-->
+<!--顶部搜索栏-->
+<view class="search">
+  <view class="search-section" >
+    <view class="search-input-wrapper">
+      <image class="search-img" src="/img/search.png" />
+      <input id="search_input" class="search-input" focus="true" placeholder="热搜词" placeholder-class="placeholder" 
+          confirm-type="search" bindconfirm="SearchClick" ></input>
+    </view>
+    <view class="search-button-wrapper">
+      <image class="search-button" src="/img/home.png" bindtap="ToHome"></image>
+    </view>
+  </view>
+</view>
+<!--搜索结果为空-->
+<view wx:if="{{products[0]==null}}">
+  <view class="noresult">
+    <text class="noresult-text">
+      很抱歉，没有搜索到相关内容
+    </text>
+  </view>
+  <view class="suggestion">
+    <view class="suggestion-section">
+      <text class="suggestion-text">不过您可以点击下面的按钮
+      呼叫专属管家为你提供服务
+      </text>
+      <view class="suggestion-img">
+        <image class="suggestion-image" src="/img/my1.png" mode="aspectFill" bindtap="chat"></image>
+      </view>
+    </view>
+  </view>
+</view> 
+<!--搜索结果列表展示-->
+<view wx:else>
+  <view class="navbar">  
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+  </view> 
+  <view class="list" wx:for="{{products}}" wx:key="unique">
+    <view class="list-block" bindtap="ToDetails" id="{{item.bodyId}}">
+      <view class="block-img">
+        <image class="cover" src="{{item.imagePath}}" wx:if="{{item.imagePath}}" mode="" />
+      </view>
+      <view class="block-text">
+        <view class="block-info">
+          <text class="text-name">{{item.bodyName}}</text>
+          <text class="text-detail">{{item.bodyShowInfo}}</text>
+        </view>
+        <view class="block-price">
+          <view class="text-price">售价：￥{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="hr-line"></view>
+  </view>
+</view>

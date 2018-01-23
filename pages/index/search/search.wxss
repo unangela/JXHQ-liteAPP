@@ -1,0 +1,91 @@
+/* search.wxss */
+/* 顶部搜索栏 */
+.search{
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #FFF;
+}
+.search-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.search-input-wrapper {
+  flex: 1;
+  margin: 12rpx;
+  background-color: #eee;
+  border-radius: 15rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.search-img{
+  margin-left: 10rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.search-input {
+  flex: 1;
+  margin: 10rpx;
+  font-size: 16px;
+  color: #666666;
+}
+.placeholder {
+    color: #D4D4D4; 
+}
+.search-button-wrapper {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 12rpx;
+}
+.search-button {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 关键词 */
+.keywords{
+  padding-top: 96.5rpx;
+}
+.history{
+  margin-bottom: 30rpx;
+}
+.history-text{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between ;
+  align-items: center;
+}
+.title{
+  display: block;
+  padding: 20rpx;
+  color: grey;
+  font-size: 16px;
+  font-family: "Microsoft JhengHei";
+}
+.delete{
+  display: block;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-right: 40rpx;
+  color: crimson;
+  font-size: 13px;
+}
+.ItemText{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+.SearchKeyItem{
+  flex: 0 0 auto;
+  margin: 7rpx; 
+  padding: 10rpx 15rpx;
+  background-color: #eee;
+  font-size: 14px;
+  color: gray;
+}

@@ -1,0 +1,53 @@
+<!--home.wxml-->
+<!--
+<view class='container'>
+  <form bindsubmit="LoginSubmit" bindreset="formReset">
+    <input type="number" placeholder="请输入手机号"maxlength="11" confirm-type="next" name="userName"></input>
+    <input placeholder="请输入密码" password='true' name="password"></input>
+    <button type='primary' class='loginBtn' formType="submit">登录</button>
+  </form>
+  <button type='default' class='regBtn' bindtap="ToRegister" >注册</button>
+  <button type='default' class='regBtn' bindtap="ForgetPsw" >忘记密码</button>
+  <button type='default' class='regBtn' bindtap="PhoneCode" >获取验证码</button>
+</view>
+-->
+
+<view class="userinfo">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" wx:if="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+
+<view class="label" bindtap="ToCart">
+  <view class="label-section">
+    <image class="logo" src="/img/shopping_cart.png" />
+    <text class="title">购物车 （{{cart.productnum}}件）</text>
+  </view>
+  <image class="button" src="/img/right_arrow.png" mode="aspectFit"/>
+</view>
+
+<view class="label" bindtap="ToOrder" id="0" >  <!--这里的id是传给order的currentTab，下面同理-->
+  <view class="label-section">
+    <image class="logo" src="/img/shopping_cart.png" />
+    <text class="title">全部订单 （{{order.ordertnum}}件）</text>
+  </view>
+  <image class="button" src="/img/right_arrow.png" mode="aspectFit"/>
+</view>
+
+<view class="label2">
+  <view class="section">
+    <image class="logo2" src="/img/daifukuan.png" bindtap="ToOrder" id="1" />
+    <text class="title2" >待付款</text>
+  </view>
+  <view class="section">
+    <image class="logo2" src="/img/daifahuo.png" bindtap="ToOrder" id="2" />
+    <text class="title2">待发货</text>
+  </view>
+  <view class="section">
+    <image class="logo2" src="/img/yifahuo.png" bindtap="ToOrder" id="3" />
+    <text class="title2">已发货</text>
+  </view>
+  <view class="section">
+    <image class="logo2" src="/img/daipingjia.png" bindtap="ToOrder" id="4" />
+    <text class="title2">待评价</text>
+  </view>
+</view>

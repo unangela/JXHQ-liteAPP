@@ -1,0 +1,36 @@
+<!--search.wxml-->
+<!--顶部搜索栏-->
+<view class="search">
+  <view class="search-section" >
+    <view class="search-input-wrapper">
+      <image class="search-img" src="/img/search.png" />
+      <input id="search_input" class="search-input" focus="true" placeholder="热搜词" placeholder-class="placeholder" 
+          confirm-type="search" bindconfirm="SearchClick" ></input>
+    </view>
+    <view class="search-button-wrapper">
+      <image class="search-button" src="/img/home.png" bindtap="ToHome"></image>
+    </view>
+  </view>
+</view>
+
+<view class="keywords">
+  <view class="history" hidden="{{HisHidden}}" >
+    <view class="history-text">
+      <text class="title">历史搜索词</text>
+      <text class="delete" bindtap="DeleteSearchData">清空</text>
+    </view>
+    <view class="ItemText">
+      <block wx:for="{{getSearch}}" wx:key="unique" >
+        <view class="SearchKeyItem" bindtap="ToSearch" id="{{item}}">{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <view class="hot">
+    <text class="title">热搜词</text>
+    <view class="ItemText">
+      <block wx:for="{{hotWordsArray}}" wx:key="unique" >
+        <view class="SearchKeyItem" bindtap="ToSearch" id="{{item}}">{{item}}</view>
+      </block>
+    </view>
+  </view>
+</view>

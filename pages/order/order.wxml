@@ -1,0 +1,29 @@
+<!--order.wxml-->
+<view class="navbar">  
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+</view>  
+  
+<!--全部订单-->  
+<view hidden="{{currentTab!==0}}">  
+  
+</view>  
+  
+<!--待付款-->  
+<view hidden="{{currentTab!==1}}">  
+   
+</view>  
+  
+<!--待发货-->  
+<view hidden="{{currentTab!==2}}">  
+ 
+</view>  
+
+<!--已发货-->  
+<view hidden="{{currentTab!==3}}">  
+  
+</view> 
+
+<!--待评价-->  
+<view hidden="{{currentTab!==4}}">  
+  
+</view> 

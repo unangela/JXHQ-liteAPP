@@ -1,0 +1,93 @@
+/* home.wxss */
+/* 登录注册 */
+.container{
+  margin: 20rpx;
+  height: 100%;
+  text-align: center;
+}
+.loginBtn{
+  color: #CD5C5C;
+  margin: 20rpx;
+}
+.regBtn{
+  margin: 20rpx;
+}
+/* 个人信息栏 */
+.userinfo{
+  width: 100%;
+  height: auto;
+  background-color: #CD5C5C;
+  padding: 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.userinfo-avatar{
+  margin-right: 30rpx;
+  padding: 0;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+}
+.userinfo-nickname{
+  font-size: 14px;
+  color: #fff;
+}
+
+/* 购物车栏 */
+.label{
+  margin-top: 10rpx;
+  height: 60rpx;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.label-section{
+  margin-left: 7rpx;
+  display: flex;
+  align-items: center;
+}
+.logo{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 7rpx;
+}
+.title{
+  font-size: 12px;
+  color: #666666;
+}
+.button{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 7rpx;
+}
+
+.label2{
+  margin-top: 5rpx;
+  padding: 10rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+}
+.section{
+  margin: 7rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo2{
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 7rpx;
+}
+.title2{
+  font-size: 14px;
+  color: #666666;
+}
