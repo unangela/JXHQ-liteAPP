@@ -1,4 +1,4 @@
-// pages/order/orderlist/orderlist.js
+// pages/my/account/account.js
 Page({
 
   /**

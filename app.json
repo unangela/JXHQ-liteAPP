@@ -1,17 +1,17 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/my/my",
-    "pages/cart/cart",
     "pages/index/search/search",
     "pages/index/search/result/result",
-    "pages/order/order",
-    "pages/order/orderlist/orderlist",
+    "pages/classify/classify",
+    "pages/cart/cart",
+    "pages/my/my",
+    "pages/my/account/account",
+    "pages/my/order/order",
+    "pages/my/order/orderdetail/orderdetail",
     "pages/shopping/shopping",
     "pages/shopping/shoppinglist/shippinglist",
-    "pages/articles/articles",
-    "pages/articles/article/article",
-    "pages/classify/classify"
+    "pages/shopping/preorder/preorder"
   ],
   "window": {
     "backgroundTextStyle": "light",

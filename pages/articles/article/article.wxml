@@ -1,8 +1,0 @@
-<!--article.wxml-->
-<view class="article">
-  <text class="title">{{title}}</text>
-  <image class="image" src="{{img_url}}" mode="aspectFit"/>
-</view>
-<scroll-view class="scoll" scroll-y="true">
-  <view class="text">{{article}}</view>
-</scroll-view>

@@ -123,7 +123,7 @@ Page({
     console.log(e);
     var currentTab = e.currentTarget.id
     wx.navigateTo({
-      url: '/pages/order/order?currentTab=' + currentTab
+      url: '/pages/my/order/order?currentTab=' + currentTab
     })
   }
 
